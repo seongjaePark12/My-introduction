@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>박성재의 개인 사이트</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+      .w3-row-padding img {margin-bottom: 12px}
+      .bgimg {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url('../myself/images/me.png');
+        min-height: 100%;
+      }
+      a{text-decoration: none;}
+    </style>
+    <script>
+        // F12 버튼 방지 
+      $(document).ready(function(){ 
+        $(document).bind('keydown',function(e){ 
+          if ( e.keyCode == 123 /* F12 */) { 
+            e.preventDefault(); 
+            e.returnValue = false; 
+            } 
+          }); 
+        }); 
+      // 우측 클릭 방지 
+      document.onmousedown=disableclick; 
+      
+      function disableclick(event){ 
+        if (event.button==2) { 
+          return false; 
+          } 
+        } 
+    </script>
+</head>
+<body oncontextmenu='return false' ondragstart='return false'>
+  <!-- Sidebar with image -->
+  <nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
+    <div class="bgimg"></div>
+  </nav>
+  <!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+  <nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
+    <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
+      <i class="fa fa-remove"></i>
+    </a>
+    <div class="w3-bar-block w3-center">
+      <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
+      <a href="#portfolio" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Portfolio</a>
+      <a href="#about" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">About</a>
+      <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="w3-main w3-padding-large" style="margin-left:40%">
+
+    <!-- Menu icon to open sidebar -->
+    <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
+
+    <!-- Header -->
+    <header class="w3-container w3-center" style="padding:128px 16px" id="home">
+      <h1 class="w3-jumbo"><b>PARK SEONGJAE</b></h1>
+      <h4><b>박성재</b></h4>
+      <p>1998.06.19</p>
+      <p>Web Developer</p>
+      <img src="../myself/images/me.png" class="w3-image w3-hide-large w3-hide-small w3-round" style="display:block;width:60%;margin:auto;">
+      <img src="../myself/images/me.png" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333">
+    </header>
+
+    <!-- Portfolio Section -->
+    <div class="w3-padding-32 w3-content" id="portfolio">
+      <h2 class="w3-text-grey">My Portfolio</h2>
+      <hr class="w3-opacity">
+      <!-- Grid for photos -->
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-half w3-margin-top">
+          <img src="../myself/images/3.gif" style="width:100%">
+          <hr/>
+          <div>
+            <h3><b>ROLEX</b></h3>
+            <h5><b>Development environment</b></h5>
+            <div><b>Development language :</b> JAVA 8, JSP, HTML5, CSS, JavaScript, Ajax, Jquery</div>
+            <div><b>Development tools :</b> Eclipse</div>
+            <div><b>Server :</b> Apache Tomcat 9.0.54</div>
+            <div><b>Database :</b> My sql 5.1.49,HeidiSql 9.5</div>
+            <h5><b>GitHub</b></h5>
+            <div><a href="https://github.com/seongjaePark12/ROLEX">https://github.com/seongjaePark12/ROLEX</a></div>
+          </div>
+        </div>
+        <div class="w3-half w3-margin-top">
+          <img src="../myself/images/4.gif" style="width:100%">
+          <hr/>
+          <div>
+            <h3><b>LOUIS VUITTON</b></h3>
+            <h5><b>Development environment</b></h5>
+            <div><b>Development language :</b> JAVA 8, JSP, HTML5, CSS, JavaScript, Ajax, Jquery</div>
+            <div><b>Development tools :</b> Spring Framework, VS code, CKEditor</div>
+            <div><b>Server :</b> Apache Tomcat 9.0.54</div>
+            <div><b>Database :</b> My sql 5.1.49,HeidiSql 9.5,Mybatis</div>
+            <h5><b>GitHub</b></h5>
+            <div><a href="https://github.com/seongjaePark12/LOUIS-VUITTON">https://github.com/seongjaePark12/LOUIS-VUITTON</a></div>
+            <h5><b>Site</b></h5>
+            <div><a href="http://49.142.157.251:9090/cjs2108_psj/" style="color: red"><b>LOUIS VUITTON LINK</b></a></div>
+          </div> 
+        </div>
+        <div class="w3-half w3-margin-top">
+          <img src="../myself/images/1.gif" style="width:100%">
+          <hr/>
+          <div>
+            <h3><b>RefrigeratorSystem</b></h3>
+            <h5><b>Development environment</b></h5>
+            <div><b>Development language :</b> JAVA 8, Swing</div>
+            <div><b>Development tools :</b> Eclipse</div>
+            <div><b>Database :</b> My sql 5.1.49</div>
+            <h5><b>GitHub</b></h5>
+            <div><a href="https://github.com/seongjaePark12/RefrigeratorSystem">https://github.com/seongjaePark12/RefrigeratorSystem</a></div>
+          </div> 
+        </div>
+        <div class="w3-half w3-margin-top">
+          <img src="../myself/images/2.gif" style="width:100%">
+          <hr/>
+          <div>
+            <h3><b>BallGame</b></h3>
+            <h5><b>Development environment</b></h5>
+            <div><b>Development language :</b> JAVA 8, Swing</div>
+            <div><b>Development tools :</b> Eclipse</div>
+            <div><b>Database :</b> My sql 5.1.49</div>
+            <h5><b>GitHub</b></h5>
+            <div><a href="https://github.com/seongjaePark12/BallGame">https://github.com/seongjaePark12/BallGame</a></div>
+          </div> 
+        </div>
+      <!-- End photo grid -->
+      </div>
+    <!-- End Portfolio Section -->
+    </div>
+
+    <!-- About Section -->
+    <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
+      <h2>About me</h2>
+      <hr class="w3-opacity">
+      <p><b>"나는 도전적인 사람이다"</b></p>
+      <p>
+        저는 도전적인 사람입니다. 해보고 싶은일이 있으면 일단 시작을 해보는 성격입니다. 
+        시작이 반이라는 말이 있듯이 무엇이든 도전해보고 경험을 쌓는다면 어떠한 것이든 도움이 될때가 분명 있을거라는 확신이 있습니다.
+        그래서 저는 웹개발에 도전을 하며 지속적으로 공부를 하여 최고의 개발자가 되겠습니다.
+      </p>
+      <h3 class="w3-padding-16">My Skills</h3>
+      <p class="w3-wide">JAVA</p>
+      <div class="w3-light-grey">
+        <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:50%"></div>
+      </div>
+      <p class="w3-wide">JSP</p>
+      <div class="w3-light-grey">
+        <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:50%"></div>
+      </div>
+      <p class="w3-wide">Javascript</p>
+      <div class="w3-light-grey">
+        <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:40%"></div>
+      </div>
+      <p class="w3-wide">jQuery</p>
+      <div class="w3-light-grey">
+        <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:30%"></div>
+      </div>
+      <p class="w3-wide">Ajax</p>
+      <div class="w3-light-grey">
+        <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:40%"></div>
+      </div>
+      <p class="w3-wide">Html</p>
+      <div class="w3-light-grey">
+        <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:50%"></div>
+      </div>
+      <p class="w3-wide">Css</p>
+      <div class="w3-light-grey">
+        <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:50%"></div>
+      </div>
+      <p class="w3-wide">Mysql</p>
+      <div class="w3-light-grey">
+        <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:55%"></div>
+      </div>
+      <p class="w3-wide">Mybatis</p>
+      <div class="w3-light-grey">
+        <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:50%"></div>
+      </div>
+      <p class="w3-wide">Oracle</p>
+      <div class="w3-light-grey">
+        <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:45%"></div>
+      </div><br>
+
+      <div class="w3-row w3-center w3-dark-grey w3-padding-16 w3-section">
+        <div class="w3-quarter w3-section">
+          <span class="w3-xlarge">Eclipse</span><br>
+        </div>
+        <div class="w3-quarter w3-section">
+          <span class="w3-xlarge">Spring Framework</span><br>
+        </div>
+        <div class="w3-quarter w3-section">
+          <span class="w3-xlarge">VS code</span><br>
+        </div>
+        <div class="w3-quarter w3-section">
+          <span class="w3-xlarge">IntelliJ</span><br>
+        </div>
+      </div>
+
+      <h3 class="w3-padding-24"></h3>
+      <img src="../myself/images/blog.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+      <p><span class="w3-large w3-text-black w3-margin-right">Blog</span>정보를 공유하기위한 블로그</p>
+      <p><a href="https://seongjae98.tistory.com/">https://seongjae98.tistory.com/</a></p><br>
+      <img src="../myself/images/git.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+      <p><span class="w3-large w3-text-black w3-margin-right">GitHub</span>깃 저장소</p>
+      <p><a href="https://github.com/seongjaePark12">https://github.com/seongjaePark12</a></p><br>
+    <!-- End About Section -->
+    </div>
+
+    <!-- Contact Section -->
+    <div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin-bottom:64px">
+      <h2>Contact Me</h2>
+      <hr class="w3-opacity">
+
+      <div class="w3-section">
+        <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i>Cheongju City, South Korea</p>
+        <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: qkrtjdwo337@naver.com</p>
+      </div>
+      <hr/>
+      <p>읽어주셔서 감사합니다.</p>
+
+    <!-- End Contact Section -->
+    </div>  
+    
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">
+      ❤-<a href="https://www.instagram.com/sj__619"><i class="fa fa-instagram w3-hover-opacity"></i></a>-❤<br/>
+      PSJ
+    <!-- End footer -->
+    </footer>
+    
+  <!-- END PAGE CONTENT -->
+  </div>
+
+  <script>
+  // Open and close sidebar
+  function openNav() {
+    document.getElementById("mySidebar").style.width = "60%";
+    document.getElementById("mySidebar").style.display = "block";
+  }
+
+  function closeNav() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+  </script>
+
+</body>
+</html>
